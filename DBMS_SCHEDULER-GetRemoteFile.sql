@@ -1,7 +1,7 @@
 clear screen;
 declare
-  v_source_file_unc varchar2(500 char) := '\\rcawinbimstrp\c$\Program Files (x86)\Common Files\MicroStrategy\Log\StatisticsFailedSQLs0.log';
-  v_credential user_scheduler_credentials.credential_name%type := 'CRED$ROBB';
+  v_source_file_unc varchar2(500 char) := '&path_with_file';
+  v_credential user_scheduler_credentials.credential_name%type := '&credential_name';
   v_file_contents clob;
   v_line_count number;
 
