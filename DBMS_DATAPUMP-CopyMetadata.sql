@@ -1,7 +1,7 @@
 set serveroutput on;
 clear screen;
 declare
-  db_link all_db_links.db_link%type := 'RCAWINBIFRTEST_EDWTS';
+  db_link all_db_links.db_link%type := '&db_link';
   logfile varchar2(128 char) := 'import.log';
   logfile_dir all_directories.directory_name%type := 'DATA_PUMP_DIR';
 
