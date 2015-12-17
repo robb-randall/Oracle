@@ -18,7 +18,7 @@ begin
     join all_sequences aseq
      on acc.owner=aseq.sequence_owner
      and upper (acc.comments)='SEQ='||aseq.sequence_name
-    where owner='BI_PROD'
+    where owner='&owner'
   ) loop
 
     declare
