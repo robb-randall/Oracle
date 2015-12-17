@@ -2,7 +2,7 @@ set serveroutput on;
 set feedback on;
 clear screen;
 declare
-  in_task_name user_parallel_execute_tasks.task_name%type := 'F_CALL_HIST_PROSPECT';
+  in_task_name user_parallel_execute_tasks.task_name%type := '&task_name';
 
   v_has_errors boolean := false;
 begin
