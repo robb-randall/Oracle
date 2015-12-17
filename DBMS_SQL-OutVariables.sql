@@ -2,7 +2,7 @@ set serveroutput on;
 clear screen;
 declare
   stmt varchar2(32767 char) := 'BEGIN DBMS_LOCK.SLEEP(2); END;';
-  db_link user_db_links.db_link%type := 'RCAWINBIFRTEST_EDWDV';
+  db_link user_db_links.db_link%type := '&db_link';
   v_start_ts timestamp;
   v_end_ts timestamp;
   v_sqlrowcount number;
