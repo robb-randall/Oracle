@@ -2,7 +2,7 @@ set serveroutput on;
 clear screen;
 
 declare
-  table_name varchar2(65 char) := '"BI_PROD"."ACTIVE_DATAMART"';
+  table_name varchar2(65 char) := '"&schema"."&table"';
   logfile varchar2(128 char) := 'DATA_PUMP_DIR:'||schema_name||'_'||to_char(sysdate, 'RRRR-MM-DD_HH24-MI')||'.log';
   dmpfile varchar2(128 char) := 'DATA_PUMP_DIR:'||schema_name||'_'||to_char(sysdate, 'RRRR-MM-DD_HH24-MI')||'.dmp';
 
