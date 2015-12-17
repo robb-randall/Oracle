@@ -10,8 +10,8 @@ from
     on regexp_like (ascr.action, ascs.step_name)
     and ascs.owner=ascr.owner
     and ascs.chain_name=ascr.chain_name
-  where ascs.owner='BI_PROD'
-    and ascs.chain_name='EDW_TMP_TO_WH_CHAIN'
+  where ascs.owner='&chain_owner'
+    and ascs.chain_name='&chain_name'
     and upper (ascr.condition)='TRUE'
   group by
     ascs.owner,
