@@ -1,8 +1,8 @@
 set serveroutput on;
 clear screen;
 declare
-  data_center_id number := 57;
-  source_db_link all_db_links.db_link%type := 'RCAWINBIFRTEST_EDWTS';
+  data_center_id number := &dcid;
+  source_db_link all_db_links.db_link%type := '&db_link';
 
   delete_stmt clob := q'~DELETE FROM ${OWNER}s.${TABLE}s WHERE DATA_CENTER_ID=:data_center_id~';
   insert_stmt clob := q'{INSERT /*+APPEND*/ INTO ${OWNER}s.${TABLE}s SELECT * FROM ${OWNER}s.${TABLE}s@${DB_LINK}s WHERE DATA_CENTER_ID=:data_center_id}';
