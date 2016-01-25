@@ -1,4 +1,4 @@
--- Package METADATA extracts remote DDL through database links
+-- Package METADATA extracts remote DDL through database links using DBMS_METADATA
 
 -- Usage:
 SELECT
